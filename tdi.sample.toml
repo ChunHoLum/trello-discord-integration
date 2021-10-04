@@ -1,0 +1,11 @@
+[server]
+cert = "fullchain.pem"
+key = "privkey.pem"
+
+[discord]
+token = "discord-token"
+channelId = "discord-channel-id"
+
+[log]
+output = "stderr"
+severity = "DEBUG"

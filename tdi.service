@@ -1,0 +1,13 @@
+[Unit]
+Description=Trello Discord Integration
+After=network.target
+
+[Service]
+Type=simple
+Restart=on-failure
+ExecStart=/usr/local/bin/trello-discord-integration start --config /etc/trello-discord-integration/tdi.toml
+ExecReload=/bin/kill -HUP $MAINPID
+PIDFile=/run/teleport-jira.pid
+
+[Install]
+WantedBy=multi-user.target
